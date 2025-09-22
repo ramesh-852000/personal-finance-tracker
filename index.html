@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker - Ramesh R</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">FinanceTracker</h1>
+            <button id="themeToggle">🌙</button>
+        </div>
+    </header>
+
+    <section class="container summary">
+        <div class="card">
+            <h3>Total Balance</h3>
+            <p id="balance">$0</p>
+        </div>
+        <div class="card">
+            <h3>Total Income</h3>
+            <p id="income">$0</p>
+        </div>
+        <div class="card">
+            <h3>Total Expenses</h3>
+            <p id="expenses">$0</p>
+        </div>
+    </section>
+
+    <section class="container add-transaction">
+        <h3>Add Transaction</h3>
+        <form id="transactionForm">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button type="submit" class="btn-primary">Add</button>
+        </form>
+    </section>
+
+    <section class="container transaction-list">
+        <h3>Transactions</h3>
+        <ul id="transactions"></ul>
+    </section>
+
+    <section class="container charts">
+        <h3>Visualizations</h3>
+        <canvas id="pieChart"></canvas>
+        <canvas id="barChart"></canvas>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
